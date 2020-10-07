@@ -8,10 +8,11 @@ import {HardcodedAuthenticationService} from '../service/hardcoded-authenticatio
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  username = 'root'
+  username = ''
   password = ''
-  errorMessage = 'Invalid Credentials'
+  errorMessage = 'Invalid Credentials';
   invalidLogin = false
+
 
 
   constructor(private router: Router,private hardcodedAuthenticationService:HardcodedAuthenticationService) { }
@@ -22,8 +23,23 @@ export class LoginComponent implements OnInit {
   handleLogin() {
 
     if(this.hardcodedAuthenticationService.authenticate(this.username,this.password)){
-      this.router.navigate(['dash']);
-      this.invalidLogin = false;
+      if(this.username === 'root'){
+        this.router.navigate(['dash']);
+        this.invalidLogin = false;
+      }
+      else if(this.username === 'man'){
+        this.router.navigate(['dash']);
+        this.invalidLogin = false;
+      }
+      else if(this.username === 'emp'){
+        this.router.navigate(['dash']);
+        this.invalidLogin = false;
+      }
+      else if(this.username === 'doc'){
+        this.router.navigate(['dash']);
+        this.invalidLogin = false;
+      }
+
     }
     else {
       this.invalidLogin = true;

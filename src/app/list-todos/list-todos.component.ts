@@ -6,9 +6,11 @@ import {Router} from '@angular/router';
 export class Todo {
    constructor(
      public id:number,
-     public description:string,
-     public done:boolean,
-     public targetDate:Date
+     public name:string,
+     public category:string,
+     public qty:number,
+     public mfd:Date,
+     public exp:Date,
    ){
 
    }

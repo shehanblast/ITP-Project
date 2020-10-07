@@ -30,9 +30,11 @@
       <table class="table">
         <thead>
         <tr>
-          <th>Description</th>
-          <th>Target Date</th>
-          <th>is Completed?</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>QTY</th>
+          <th>MFD</th>
+          <th>EXP</th>
           <th>Update</th>
           <th>Delete</th>
         </tr>
@@ -40,13 +42,16 @@
         <tbody>
         <!--   for (Todo todo: todos) {  -->
         <tr *ngFor="let todo of todos">
-          <td>{{todo.description}}</td>
-          <td>{{todo.targetDate | date | uppercase}}</td>
-          <td>{{todo.done}}</td>
+          <td>{{todo.name}}</td>
+          <td>{{todo.category}}</td>
+          <td>{{todo.qty}}</td>
+          <td>{{todo.mfd | date | uppercase}}</td>
+          <td>{{todo.exp | date | uppercase}}</td>
           <td><button (click)="updateTodo(todo.id)" class="btn btn-success">Update</button></td>
           <td><button (click)="deleteTodo(todo.id)" class="btn btn-warning">Delete</button></td>
 
         </tr>
+
         <!-- } -->
         </tbody>
 

@@ -15,6 +15,9 @@ import {SuppliersComponent} from './suppliers/suppliers.component';
 import {DrugIssueComponent} from './drug-issue/drug-issue.component';
 import {OrderStockComponent} from './order-stock/order-stock.component';
 import {PatientComponent} from './patient/patient.component';
+import {ListDrugsComponent} from './list-drugs/list-drugs.component';
+import {SupplierComponent} from './supplier/supplier.component';
+import {Dashboard2Component} from './dashboard2/dashboard2.component';
 
 
 const routes: Routes = [
@@ -28,10 +31,13 @@ const routes: Routes = [
   { path: 'doc', component: DoctorComponent, canActivate:[RouteGuardService]},
   { path: 'emp', component: EmployeeComponent, canActivate:[RouteGuardService]},
   { path: 'fin', component: FinanceComponent, canActivate:[RouteGuardService]},
-  { path: 'sup', component: SuppliersComponent, canActivate:[RouteGuardService]},
-  { path: 'issue', component: DrugIssueComponent, canActivate:[RouteGuardService]},
+  { path: 'suppliers', component: SuppliersComponent, canActivate:[RouteGuardService]},
+  { path: 'drugs', component: DrugIssueComponent, canActivate:[RouteGuardService]},
   { path: 'order', component: OrderStockComponent, canActivate:[RouteGuardService]},
   { path: 'patient', component: PatientComponent, canActivate:[RouteGuardService]},
+  { path: 'supplier/:id', component: SupplierComponent, canActivate:[RouteGuardService]},
+  { path: 'drug/:id', component: ListDrugsComponent, canActivate:[RouteGuardService]},
+  { path: 'dash2', component: Dashboard2Component, canActivate:[RouteGuardService] },
 
 
   { path: '**', component: ErrorComponent }//anything else

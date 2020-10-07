@@ -23,6 +23,10 @@ import { FinanceComponent } from './finance/finance.component';
 import { SuppliersComponent } from './suppliers/suppliers.component';
 import { DrugIssueComponent } from './drug-issue/drug-issue.component';
 import { OrderStockComponent } from './order-stock/order-stock.component';
+import { ListDrugsComponent } from './list-drugs/list-drugs.component';
+import { SupplierComponent } from './supplier/supplier.component';
+import { Dashboard2Component } from './dashboard2/dashboard2.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -45,13 +49,17 @@ import { OrderStockComponent } from './order-stock/order-stock.component';
     FinanceComponent,
     SuppliersComponent,
     DrugIssueComponent,
-    OrderStockComponent
+    OrderStockComponent,
+    ListDrugsComponent,
+    SupplierComponent,
+    Dashboard2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

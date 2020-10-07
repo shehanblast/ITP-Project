@@ -16,6 +16,9 @@
         <a class="nav-link disabled" href="#"></a>
       </li>
     </ul>
+    <form class="form-inline my-2 my-lg-0 jj">
+        <button class="btn btn-primary my-2 my-sm-0"><i class="fas fa-user-md"></i>  {{person}}</button>
+    </form>
     <form class="form-inline my-2 my-lg-0">
       <a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">
         <button class="btn btn-outline-primary my-2 my-sm-0">Logout</button></a>
