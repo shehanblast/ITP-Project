@@ -65,6 +65,15 @@ export class ListTodosComponent implements OnInit {
     this.router.navigate(['todo',-1])
   }
 
+  report(){
+    this.todoService.generateReport().subscribe(
+      response => {
+        console.log(response);
+        this.message = 'Sucessfully deleted!'
+        this.refreshTodos()
+      }
+    )
+  }
 
 
 }

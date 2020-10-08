@@ -30,4 +30,8 @@ export class TodoDataService {
     return this.http.post(`http://localhost:8080/jpa/users/${username}/todos`,todo);
   }
 
+  generateReport(){
+    return this.http.get('http://localhost:8080/report/pdf');
+  }
+
 }
