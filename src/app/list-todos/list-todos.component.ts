@@ -38,7 +38,7 @@ export class ListTodosComponent implements OnInit {
   }
 
   refreshTodos(){
-    this.todoService.retrieveAllTodos('in28minutes').subscribe(
+    this.todoService.retrieveAllTodos().subscribe(
       response => {
         console.log(response);
         this.todos = response;

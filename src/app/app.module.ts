@@ -27,7 +27,13 @@ import { ListDrugsComponent } from './list-drugs/list-drugs.component';
 import { SupplierComponent } from './supplier/supplier.component';
 import { Dashboard2Component } from './dashboard2/dashboard2.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatButtonModule} from '@angular/material';
+import { HomeComponent } from './home/home.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 @NgModule({
@@ -53,14 +59,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     OrderStockComponent,
     ListDrugsComponent,
     SupplierComponent,
-    Dashboard2Component
+    Dashboard2Component,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
