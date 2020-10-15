@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-finance',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FinanceComponent implements OnInit {
 
-  constructor() { }
+  myimage : String ="assets/images/finance-charts-d-illustration-financial-diagram-pie-chart-sheets-report-32147993.jpg"
+  constructor(private router : Router) { }
 
   ngOnInit() {
+  }
+
+  handleImcomes(){
+    this.router.navigate(['incomesDetails'])
+  }
+  handleExpenses(){
+    this.router.navigate(['expensesDetails'])
+
   }
 
 }

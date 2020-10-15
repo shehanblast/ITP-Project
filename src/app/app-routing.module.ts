@@ -30,6 +30,13 @@ import { InsertMedicalLtComponent } from './insert-medical-lt/insert-medical-lt.
 import { DoctorsComponent } from './doctors/doctors.component';
 import { OrdersComponent } from './orders/orders.component';
 import { OrderssComponent } from './orderss/orderss.component';
+import { OrdersReportComponent } from './orders-report/orders-report.component';
+import { IncomesDetailsComponent } from './incomes-details/incomes-details.component';
+import { ExpensesDetailsComponent } from './expenses-details/expenses-details.component';
+import { AddNewExpensesComponent } from './add-new-expenses/add-new-expenses.component';
+import { AddNewIncomesComponent } from './add-new-incomes/add-new-incomes.component';
+import { ExpenseReportComponent } from './expense-report/expense-report.component';
+import { IncomeReportComponent } from './income-report/income-report.component';
 
 
 const routes: Routes = [
@@ -42,14 +49,26 @@ const routes: Routes = [
   { path: 'todo/:id', component: TodoComponent, canActivate:[RouteGuardService]},
   { path: 'doc', component: DoctorsComponent, canActivate:[RouteGuardService]},
   { path: 'doctor/:id', component: DoctorComponent, canActivate:[RouteGuardService]},
+  { path: 'doctors', component: DoctorsComponent, canActivate:[RouteGuardService]},
+
   { path: 'emp', component: EmployeeComponent, canActivate:[RouteGuardService]},
+
   { path: 'fin', component: FinanceComponent, canActivate:[RouteGuardService]},
+  { path: 'incomesDetails',component:IncomesDetailsComponent,canActivate:[RouteGuardService]},
+  { path: 'expensesDetails',component:ExpensesDetailsComponent,canActivate:[RouteGuardService]},
+  { path : 'addNewExpenses/:id', component:AddNewExpensesComponent,canActivate:[RouteGuardService]},
+  { path : 'addNewIncomes/:id', component:AddNewIncomesComponent,canActivate:[RouteGuardService]},
+  { path: 'expenseReport',component:ExpenseReportComponent,canActivate:[RouteGuardService]},
+  { path: 'incomeReport',component:IncomeReportComponent,canActivate:[RouteGuardService]},
+
+
   { path: 'suppliers', component: SuppliersComponent, canActivate:[RouteGuardService]},
   { path: 'drugs', component: DrugIssueComponent, canActivate:[RouteGuardService]},
   
   { path: 'order', component: OrdersComponent, canActivate:[RouteGuardService]},
   { path: 'orders/:id', component: OrderssComponent, canActivate:[RouteGuardService]},
   { path: 'orderss',component:OrdersComponent, canActivate:[RouteGuardService]},
+  { path: 'details',component:OrdersReportComponent, canActivate:[RouteGuardService]},
   
   { path: 'patient', component: PatientComponent, canActivate:[RouteGuardService]},
   { path: 'supplier/:id', component: SupplierComponent, canActivate:[RouteGuardService]},

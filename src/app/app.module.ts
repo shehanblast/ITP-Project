@@ -48,6 +48,12 @@ import { DoctorsComponent } from './doctors/doctors.component';
 import { OrdersComponent } from './orders/orders.component';
 import { OrdersReportComponent } from './orders-report/orders-report.component';
 import { OrderssComponent } from './orderss/orderss.component';
+import { ExpensesDetailsComponent } from './expenses-details/expenses-details.component';
+import { ExpenseReportComponent } from './expense-report/expense-report.component';
+import { IncomesDetailsComponent } from './incomes-details/incomes-details.component';
+import { IncomeReportComponent } from './income-report/income-report.component';
+import { AddNewIncomesComponent } from './add-new-incomes/add-new-incomes.component';
+import { AddNewExpensesComponent } from './add-new-expenses/add-new-expenses.component';
 
 
 
@@ -89,7 +95,13 @@ import { OrderssComponent } from './orderss/orderss.component';
     DoctorsComponent,
     OrdersComponent,
     OrdersReportComponent,
-    OrderssComponent
+    OrderssComponent,
+    ExpensesDetailsComponent,
+    ExpenseReportComponent,
+    IncomesDetailsComponent,
+    IncomeReportComponent,
+    AddNewIncomesComponent,
+    AddNewExpensesComponent
   ],
   imports: [
     BrowserModule,
