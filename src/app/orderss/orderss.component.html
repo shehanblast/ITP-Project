@@ -1,0 +1,115 @@
+<div class="main1">
+    <div class="container1">
+        <H1>Order Details</H1></div>
+      
+      <div class="container">
+        <!--<div class="alert alert-warning" *ngIf="todoForm.dirty && todoForm.invalid">Enter valid values</div>
+        <div class="alert alert-warning" *ngIf="todoForm.dirty && targetDate.invalid">Enter valid Target Date</div>
+        <div class="alert alert-warning" *ngIf="todoForm.dirty && description.invalid">Enter atleast 5 characters in Description</div>-->
+      
+        <form  name = "form"  (ngSubmit)="ordersForm.form.valid; saveOrders(); onFormSubmit(ordersForm);" #ordersForm="ngForm">
+          
+          
+          <!-- ordersForm.form.valid &&  -->
+          <fieldset class="form-group">
+            <label><strong>Medicine Name</strong></label>
+            <input type="text" #medicine="ngModel"
+                   
+                   name="medicine" [(ngModel)]="orders.medicine" class="form-control" minlength="5" [ngClass] = "{ 'is-invalid':ordersForm.submitted && medicine.invalid }" required medicine/>
+            <div *ngIf = "ordersForm.submitted && medicine.invalid" class="invalid-input">
+              <div *ngIf= "medicine.errors?.required">Name is required</div>
+            </div>
+            
+          
+          </fieldset>
+      
+          <fieldset class="form-group">
+            <label><strong>supplier name</strong></label>
+            <input type="text" #sname="ngModel"
+                    class="form-control"
+                   name="sname"[(ngModel)]="orders.sname"  minlength="2" [ngClass] = "{ 'is-invalid':ordersForm.submitted && sname.invalid }" required sname/>
+                   <div *ngIf = "ordersForm.submitted && sname.invalid" class="invalid-input">
+                    <div *ngIf= "sname.errors?.required">Supplier Name is required</div>
+                   </div>
+          
+          </fieldset>
+      
+          <fieldset class="form-group">
+            <label><strong>supplier mobile</strong></label>
+            <input type="text" #smobile="ngModel"
+                    class="form-control"
+                   name="smobile" [pattern]="mobNumberPattern" [(ngModel)]="orders.smobile" minlength="10" maxlength="10" required smobile/>
+                   <!-- [ngClass] = "{ 'is-invalid':ordersForm.submitted && smobile.invalid }" -->
+                   
+                
+                   <div *ngIf="smobile.errors && ordersForm.submitted && !isValidFormSubmitted" [ngClass] = "'error'"class="invalid-input">  
+                     <div *ngIf="smobile.errors.pattern">Mobile number not valid.</div>   
+                   </div>      
+                  
+                  
+                  
+                   <!-- <div *ngIf = "ordersForm.submitted && smobile.invalid" class="invalid-input">
+                    <div *ngIf= "smobile.errors?.required">Supplier Mobile Number is required</div>
+                    <div *ngIf= "smobile.errors?.mobile">Supplier Mobile Number is not valid format</div>
+                    <div *ngIf= "smobile.errors?.minlength">Supplier Mobile Number is too short</div>
+                   </div> -->
+                   
+                   
+                   
+          </fieldset>
+      
+          <fieldset class="form-group">
+            <label><strong>Quantity</strong></label>
+            <input type="number" #quantity="ngModel"
+                    class="form-control"
+                   name="quantity" [(ngModel)]="orders.quantity" minlength="10" [ngClass] = "{ 'is-invalid':ordersForm.submitted && quantity.invalid }" required quantity/>
+                   <div *ngIf = "ordersForm.submitted && quantity.invalid" class="invalid-input">
+                    <div *ngIf= "quantity.errors?.required">Quantity is required</div>
+                   </div>
+          
+         </fieldset>
+         <!-- <fieldset class="form-group">
+          <label>Unit Price</label>
+          <input type="number" #unit="ngModel"
+                  class="form-control"
+                 name="unit" [(ngModel)]="orders.unit" minlength="10" [ngClass] = "{ 'is-invalid':ordersForm.submitted && unit.invalid }" required unit/>
+                 <div *ngIf = "ordersForm.submitted && unit.invalid" class="invalid-input">
+                  <div *ngIf= "unit.errors?.required">Unit price is required</div>
+                 </div>
+        
+       </fieldset> -->
+      
+          <fieldset class="form-group">
+            <label><strong>Status</strong></label>
+            <input type="text" #status="ngModel"
+                    class="form-control"
+                   name="status" [(ngModel)]="orders.status" minlength="5" [ngClass] = "{ 'is-invalid':ordersForm.submitted && status.invalid }" required status/>
+                   <div *ngIf = "ordersForm.submitted && status.invalid" class="invalid-input">
+                    <div *ngIf= "status.errors?.required">Status is required</div>
+                   </div>
+          </fieldset>
+      
+          <fieldset class="form-group">
+            <label><strong>Type</strong></label>
+            <input type="text" #type="ngModel"
+                    class="form-control"
+                   name="type" [(ngModel)]="orders.type" minlength="4" [ngClass] = "{ 'is-invalid':ordersForm.submitted && type.invalid }" required type/>
+                   <div *ngIf = "ordersForm.submitted && type.invalid" class="invalid-input">
+                    <div *ngIf= "type.errors?.required">Medicine type is required</div>
+                   </div>
+          </fieldset>
+      
+          <!-- (click)= "saveOrders()" -->
+       
+          
+      
+          <button type="submit" class="btn btn-success" >Save</button>
+        
+        </form>
+       
+      </div>
+      <!-- <div class="img1">
+        <img src="/assets/images/details.png" alt="image" width="200px" height="400px">
+      </div> -->
+ 
+    </div>

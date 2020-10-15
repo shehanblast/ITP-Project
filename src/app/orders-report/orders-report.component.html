@@ -1,0 +1,37 @@
+<div class="container" id ="element-to-export">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Order Id</th>
+        <th>Medicine Name</th>
+        <th> Order Date</th>
+        <th>Supplier Name</th>
+        <th>Supplier Mobile</th>
+        <th>Quantity</th>
+        <th>Status</th>
+        <th>Type</th>
+      </tr>
+      </thead>
+      <tbody>
+      <!--   for (Orders orders: orderss) {  -->
+      <tr *ngFor="let orders of orderss">
+        <td>{{orders.id}}</td>
+        <td>{{orders.medicine}}</td>
+        <td>{{orders.odate}}</td>
+        <td>{{orders.sname}}</td>
+        <td>{{orders.smobile}}</td>
+        <td>{{orders.quantity}}</td>
+        <td>{{orders.status}}</td>
+        <td>{{orders.type}}</td>
+        
+
+      </tr>
+      <!-- } -->
+      </tbody>
+
+    </table>
+    
+  </div>
+  <div class="actions1">
+      <button class= "btnExport" (click) = "onExportClick()">Export To PDF </button>
+  </div>

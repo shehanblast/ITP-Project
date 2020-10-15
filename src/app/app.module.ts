@@ -45,6 +45,9 @@ import { RegisterPatientsComponent } from './register-patients/register-patients
 import { PatientHeaderComponent } from './patient-header/patient-header.component';
 import { MedicalReportComponent } from './medical-report/medical-report.component';
 import { DoctorsComponent } from './doctors/doctors.component';
+import { OrdersComponent } from './orders/orders.component';
+import { OrdersReportComponent } from './orders-report/orders-report.component';
+import { OrderssComponent } from './orderss/orderss.component';
 
 
 
@@ -83,7 +86,10 @@ import { DoctorsComponent } from './doctors/doctors.component';
     ViewMedicalComponent,
     ViewPatientComponent,
     ViewPatientsComponent,
-    DoctorsComponent
+    DoctorsComponent,
+    OrdersComponent,
+    OrdersReportComponent,
+    OrderssComponent
   ],
   imports: [
     BrowserModule,

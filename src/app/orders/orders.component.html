@@ -1,0 +1,83 @@
+<app-header></app-header>
+
+<div class="row">
+  <div class="col-md-1">
+    <app-nav></app-nav>
+  </div>
+  <div class="col-md-11 text-left">
+
+
+    <br><br>
+
+
+
+    <div class="container">
+
+      <div class="alert alert-light" role="alert">
+        <h3><i class="fas fa-business-time"></i> &nbsp; Order Details</h3>
+        <form class="form-inline active-cyan-4">
+            <input class="form-control form-control-sm mr-3 w-75" type="text" [(ngModel)] = "filters.keyword" placeholder="Search By Medicine" name="keyword" (input) = "searchOrders()">
+            <i class="fa fa-search fa-sm"></i>
+          </form>
+      </div>
+      <div class="row">
+        <button (click)="navigateReport(); refreshOrderss();" class="btn btn-success1"><i class="fa fa-file" aria-hidden="true"></i>Generate Report</button>
+      </div>
+
+   
+
+    </div>
+
+    <div class="container">
+      <div class="alert alert-success" *ngIf='message'>{{message}}</div>
+    </div>
+
+    <div class="container">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Order Id</th>
+          <th>Medicine Name</th>
+          <th> Order Date</th>
+          <th>Supplier Name</th>
+          <th>Supplier Mobile</th>
+          <th>Quantity</th>
+          <th>Status</th>
+          <th>Type</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--   for (Orders orders: orderss) {  -->
+        <tr *ngFor="let orders of orderss">
+          <td>{{orders.id}}</td>
+          <td>{{orders.medicine}}</td>
+          <td>{{orders.odate}}</td>
+          <td>{{orders.sname}}</td>
+          <td>{{orders.smobile}}</td>
+          <td>{{orders.quantity}}</td>
+          <td>{{orders.status}}</td>
+          <td>{{orders.type}}</td>
+          <td><button (click)="updateOrders(orders.id)" class="btn btn-success">Update</button></td>
+          <td><button (click)="deleteOrders(orders.id)" class="btn btn-warning">Delete</button></td>
+
+        </tr>
+        <!-- } -->
+        </tbody>
+
+      </table>
+      
+
+      <div class="row">
+        <button (click)="addOrders()" class="btn btn-success">Add</button>
+      </div>
+
+    
+
+
+
+    </div>
+
+  </div>
+</div>

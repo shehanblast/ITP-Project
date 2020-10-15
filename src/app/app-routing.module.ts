@@ -28,6 +28,8 @@ import { MedicalReportComponent } from './medical-report/medical-report.componen
 import { ViewAllmedicalComponent } from './view-allmedical/view-allmedical.component';
 import { InsertMedicalLtComponent } from './insert-medical-lt/insert-medical-lt.component';
 import { DoctorsComponent } from './doctors/doctors.component';
+import { OrdersComponent } from './orders/orders.component';
+import { OrderssComponent } from './orderss/orderss.component';
 
 
 const routes: Routes = [
@@ -44,7 +46,11 @@ const routes: Routes = [
   { path: 'fin', component: FinanceComponent, canActivate:[RouteGuardService]},
   { path: 'suppliers', component: SuppliersComponent, canActivate:[RouteGuardService]},
   { path: 'drugs', component: DrugIssueComponent, canActivate:[RouteGuardService]},
-  { path: 'order', component: OrderStockComponent, canActivate:[RouteGuardService]},
+  
+  { path: 'order', component: OrdersComponent, canActivate:[RouteGuardService]},
+  { path: 'orders/:id', component: OrderssComponent, canActivate:[RouteGuardService]},
+  { path: 'orderss',component:OrdersComponent, canActivate:[RouteGuardService]},
+  
   { path: 'patient', component: PatientComponent, canActivate:[RouteGuardService]},
   { path: 'supplier/:id', component: SupplierComponent, canActivate:[RouteGuardService]},
   { path: 'drug/:id', component: ListDrugsComponent, canActivate:[RouteGuardService]},
@@ -65,6 +71,8 @@ const routes: Routes = [
   {path: 'view-medical', component: ViewMedicalComponent},
   {path: 'viewAllMedical', component: ViewAllmedicalComponent},
   {path: 'medical-report/:patientID', component: MedicalReportComponent},
+
+
 
   
 
