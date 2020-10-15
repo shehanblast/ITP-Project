@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class PatientComponent implements OnInit {
 
+  myimage : String ="assets/images/shutterstock_645685942-800x450.jpg"
   constructor(private router: Router) { }
 
   ngOnInit() {
