@@ -1,0 +1,112 @@
+ul.mainMenu {
+    background-color: #0099ff;
+    overflow: hidden;
+    list-style-type: none;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+  }
+  li {
+    float : left;
+    color : #333333;
+    display : block;
+    padding : 14px 16px;
+    text-decoration : none;
+    font-family: Calibri, serif;
+    font-size : 20px;
+    font-weight: bold;
+  
+  }
+  
+  li a {
+    text-decoration : none;
+    color : #333333;
+  }
+  
+  li:hover
+  {
+    background-color : aqua;
+    font-size : 20px;
+    text-decoration : none;
+  }
+  
+  .header
+  {
+    width : 100%;
+    background-color: steelblue;
+  }
+  
+  .headingName{
+    font-family: Yu Gothic UI, serif;
+    margin-right: 20px;
+  }
+  
+  .propic {
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  
+  .sidenav {
+    height: 70%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: lightslategray;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    margin-top: 200px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #333333;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: crimson;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+  button{
+    background-color: #0099ff;
+    border: none;
+    font-family: Calibri, serif;
+    font-size : 20px;
+    font-weight: bold;
+    color: #333333;
+    outline:none;
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  button:hover{
+    background-color : aqua;
+    font-size : 20px;
+    text-decoration : none;
+    border: none;
+  }

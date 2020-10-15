@@ -1,0 +1,17 @@
+<link rel = "stylesheet" type = "text/css" href = "patient-header.component.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title></title>
+<div class = "header">
+  <table>
+    <tr><td></td><td><h1 class = "headingName">Siddhavedha Ayurvedic Medical Center</h1></td></tr>
+  </table>
+  <div class = "navBar">
+    <ul class = "mainMenu">
+      <li><a href ="#" routerLink="/searchPatients" routerLinkActive="active" class="fa fa-home" style="font-size:25px"></a></li>
+      <li><a href="#" routerLink="/viewPatients"  routerLinkActive="active">View Patients</a></li>
+      <li><a href="#" routerLink="/viewAllMedical"  routerLinkActive="active" *ngIf="patient">View All Medical</a></li>
+      <li><button (click) = addPatient() class="insertPatientbtn" *ngIf="patient">Insert Patients</button></li>
+      <li><a href="#" routerLink="/dash"  routerLinkActive="active">Dashboard</a></li>
+    </ul>
+  </div>
+</div>

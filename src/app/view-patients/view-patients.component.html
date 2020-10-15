@@ -1,0 +1,46 @@
+<div class = "body">
+    <link rel = "stylesheet" type = "text/css" href = "view-patients.component.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title></title>
+    <app-patient-header></app-patient-header>
+    
+    <div class="container">
+      <table class="table" *ngIf="!isEmptyObject(patients)">
+        <thead>
+          <tr>
+            <th>Patient ID</th>
+            <th>Patient Name</th>
+            <th>Age</th>
+            <th>Date of Birth</th>
+            <th>Address</th>
+            <th>Telephone Number</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Age Group</th>
+            <th *ngIf = "patientview">Update</th>
+            <th *ngIf = "patientview">Delete</th>
+            <th *ngIf = "patientview">Insert Short Term illnesses</th>
+            <th *ngIf = "patientview">Insert Long Term illnesses</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let patient of patients">
+            <td>{{patient.patientID}}</td>
+            <td>{{patient.patientName}}</td>
+            <td>{{patient.age}}</td>
+            <td>{{patient.dob}}</td>
+            <td>{{patient.address}}</td>
+            <td>{{patient.telephoneNo}}</td>
+            <td>{{patient.email}}</td>
+            <td>{{patient.gender}}</td>
+            <td>{{patient.ageGroup}}</td>
+            <td *ngIf = "patientview"><button (click)="updatePatient(patient.patientID)" class="updatebtn">Update</button></td>
+            <td *ngIf = "patientview"><button (click)="deletePatient(patient.patientID)" class="deletebtn">Delete</button></td>
+            <td *ngIf = "patientview"><button (click)="insertmedical(patient.patientID)" class="insertMedical">Insert ST</button></td>
+            <td *ngIf = "patientview"><button (click)="insertmedicallt(patient.patientID)" class="insertMedical">Insert LT</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>  
+</div>

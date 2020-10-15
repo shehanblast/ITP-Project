@@ -53,11 +53,11 @@
         <tbody>
         <!--   for (Todo todo: todos) {  -->
         <tr *ngFor="let supplier of suppliers">
-          <td>{{supplier.name}}</td>
-          <td>{{supplier.companyname}}</td>
-          <td>{{supplier.telno}}</td>
-          <td>{{supplier.email}}</td>
-          <td>{{supplier.manuname}}</td>
+          <td>{{supplier.Name}}</td>
+          <td>{{supplier.CompanyName}}</td>
+          <td>{{supplier.TelNo}}</td>
+          <td>{{supplier.Email}}</td>
+          <td>{{supplier.Manuname}}</td>
 
           <td><button (click)="updateSupplier(supplier.id)" class="btn btn-success">Update</button></td>
           <td><button (click)="deleteSupplier(supplier.id)" class="btn btn-warning">Delete</button></td>

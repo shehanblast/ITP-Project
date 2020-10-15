@@ -18,6 +18,16 @@ import {PatientComponent} from './patient/patient.component';
 import {ListDrugsComponent} from './list-drugs/list-drugs.component';
 import {SupplierComponent} from './supplier/supplier.component';
 import {Dashboard2Component} from './dashboard2/dashboard2.component';
+import { SearchPatientsComponent } from './search-patients/search-patients.component';
+import { RegisterPatientsComponent } from './register-patients/register-patients.component';
+import { InsertMedicalComponent } from './insert-medical/insert-medical.component';
+import { ViewPatientsComponent } from './view-patients/view-patients.component';
+import { ViewPatientComponent } from './view-patient/view-patient.component';
+import { ViewMedicalComponent } from './view-medical/view-medical.component';
+import { MedicalReportComponent } from './medical-report/medical-report.component';
+import { ViewAllmedicalComponent } from './view-allmedical/view-allmedical.component';
+import { InsertMedicalLtComponent } from './insert-medical-lt/insert-medical-lt.component';
+import { DoctorsComponent } from './doctors/doctors.component';
 
 
 const routes: Routes = [
@@ -28,7 +38,8 @@ const routes: Routes = [
   { path: 'todos', component: ListTodosComponent, canActivate:[RouteGuardService]},
   { path: 'logout', component: LogoutComponent, canActivate:[RouteGuardService]},
   { path: 'todo/:id', component: TodoComponent, canActivate:[RouteGuardService]},
-  { path: 'doc', component: DoctorComponent, canActivate:[RouteGuardService]},
+  { path: 'doc', component: DoctorsComponent, canActivate:[RouteGuardService]},
+  { path: 'doctor/:id', component: DoctorComponent, canActivate:[RouteGuardService]},
   { path: 'emp', component: EmployeeComponent, canActivate:[RouteGuardService]},
   { path: 'fin', component: FinanceComponent, canActivate:[RouteGuardService]},
   { path: 'suppliers', component: SuppliersComponent, canActivate:[RouteGuardService]},
@@ -39,13 +50,29 @@ const routes: Routes = [
   { path: 'drug/:id', component: ListDrugsComponent, canActivate:[RouteGuardService]},
   { path: 'dash2', component: Dashboard2Component, canActivate:[RouteGuardService] },
 
+  {path: 'searchPatients', component: SearchPatientsComponent},
+  {path: 'view-Patient-Details', component: SearchPatientsComponent},
+  {path: 'insertPatient', component: RegisterPatientsComponent},
+  {path: 'viewPatients', component: ViewPatientsComponent},
+  {path: 'insertMedic', component: InsertMedicalComponent},
+  {path: 'search-patients/:patientName', component: ViewPatientComponent},
+  {path: 'view-patients', component: ViewPatientsComponent},
+  {path: 'register-patients', component: RegisterPatientsComponent},
+  {path: 'register-patients/:patientID', component: RegisterPatientsComponent},
+  {path: 'insert-medical/:patientID/:stID', component: InsertMedicalComponent},
+  {path: 'insert-medicallt/:patientID/:ltID', component:InsertMedicalLtComponent},
+  {path: 'view-medical/:patientID', component: ViewMedicalComponent},
+  {path: 'view-medical', component: ViewMedicalComponent},
+  {path: 'viewAllMedical', component: ViewAllmedicalComponent},
+  {path: 'medical-report/:patientID', component: MedicalReportComponent},
 
+  
 
   { path: '**', component: ErrorComponent }//anything else
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: "legacy" })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

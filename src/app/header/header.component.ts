@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   log:String = "";
   person:String = "";
 
-  constructor(private hardcodedAuthenticationService:HardcodedAuthenticationService) { }
+  constructor(public hardcodedAuthenticationService:HardcodedAuthenticationService) { }
 
   ngOnInit() {
     this.log = this.hardcodedAuthenticationService.isAdmin();

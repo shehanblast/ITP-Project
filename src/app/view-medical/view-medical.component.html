@@ -1,0 +1,70 @@
+<div class = "body">
+    <script src="src/assets/js/search-patient.js"></script>
+    <link rel = "stylesheet" type = "text/css" href = "view-medical.component.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title></title>
+    <app-patient-header></app-patient-header>
+<div class="container">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Patient Name</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Telephone Number</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Age Group</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>{{patients.patientName}}</td>
+        <td>{{patients.age}}</td>
+        <td>{{patients.address}}</td>
+        <td>{{patients.telephoneNo}}</td>
+        <td>{{patients.email}}</td>
+        <td>{{patients.gender}}</td>
+        <td>{{patients.ageGroup}}</td>
+      </tr>
+      </tbody>
+    </table>
+</div>
+
+<div class="STcontainer">
+  <table class="STtable" *ngIf="!isEmptyObject(stillnesses)">
+    <thead>
+    <tr>
+      <th>Short Term Illness Name</th>
+      <th>Channel Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let stillness of stillnesses">
+      <td>{{stillness.stName}}</td>
+      <td>{{stillness.stChanneldate}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="LTcontainer">
+  <table class="LTtable" *ngIf="!isEmptyObject(ltillnesses)">
+    <thead>
+    <tr>
+      <th>Long Term Illness Name</th>
+      <th>Channel Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let ltillness of ltillnesses">
+      <td>{{ltillness.ltName}}</td>
+      <td>{{ltillness.ltChanneldate}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<h1 *ngIf="isEmptyObject(stillnesses)">No Medical details found</h1>
+<button (click)="generateMedicalReport(patients.patientID)"class="btn btn-info">Generate Medical Report</button>
+
+</div>

@@ -1,0 +1,38 @@
+<div class = "body">
+    <script src="src/assets/js/search-patient.js"></script>
+    <link rel = "stylesheet" type = "text/css" href = "insert-medical.component.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title></title>
+    <app-patient-header></app-patient-header>
+
+    <div class = "InsertShortTermIlnesses">
+        <form (ngSubmit)="!stillnessForm.invalid && saveSTillness()" #stillnessForm="ngForm">
+
+          <div class="form-group">
+            <label>Short Term Illness Name</label>
+            <input type="text" #st_name="ngModel"
+                   [(ngModel)]="stillness.stName" class="form-control"
+                   [class.is-invalid]="st_name.invalid && st_name.touched" class="form-control"
+                   name="stName" required="required" minlength="2">
+                   <div *ngIf = "st_name.errors && (st_name.invalid || st_name.touched)">
+                    <small class="text-danger" *ngIf="st_name.errors.required">Short Term Illness Name is required</small>
+                  </div>
+          </div>
+      
+          <div class="form-group">
+            <label>Channel Date</label>
+            <input type="date" #st_channeldate="ngModel"
+                   [(ngModel)]="stillness.stChanneldate" class="form-control"
+                   [class.is-invalid]="st_channeldate.invalid && st_channeldate.touched" class="form-control"
+                   name="stChanneldate" required="required">
+                   <div *ngIf = "st_channeldate.errors && (st_channeldate.invalid || st_channeldate.touched)">
+                    <small class="text-danger" *ngIf="st_channeldate.errors.required">Channel Date is required</small>
+                  </div>
+          </div>
+          <button type="submit">Save</button>
+        </form>
+      </div>
+
+
+
+</div>

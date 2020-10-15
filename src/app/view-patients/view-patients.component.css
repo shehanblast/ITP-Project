@@ -1,0 +1,51 @@
+.body{
+    background-attachment: fixed;
+    width: auto;
+    height: auto;
+    background-image: linear-gradient(to right, floralwhite, steelblue);
+    font-family: "Lato", sans-serif;
+    font-size: smaller;
+    height: 100%;
+  }
+
+  table{
+    width: auto;
+    height: auto;
+    position: relative;
+  }
+
+   th, td {
+    border: 2px solid white;
+    width: fit-content;
+    text-align: center;
+    
+  }
+
+  th{
+    border: 2px solid white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: rgb(71, 147, 247);
+    color: black;
+    
+  }
+
+  .updatebtn{
+    background-color: springgreen;
+    color:black;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .deletebtn{
+    background-color: red;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .insertMedical{
+    background-color: mediumturquoise;
+    width: fit-content;
+    height: fit-content;
+  }

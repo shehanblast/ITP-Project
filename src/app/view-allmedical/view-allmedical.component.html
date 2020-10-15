@@ -1,0 +1,44 @@
+<div class = "body">
+    <script src="src/assets/js/search-patient.js"></script>
+    <link rel = "stylesheet" type = "text/css" href = "view-allmedical.component.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title></title>
+    <app-patient-header></app-patient-header>
+<div class="STcontainer">
+    <table class="STtable" *ngIf="!isEmptyObject(ltillnesses)">
+      <thead>
+      <tr>
+        <th>Short Term Illness ID</th>
+        <th>Short Term Illness Name</th>
+        <th>Channel Date</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let stillness of stillnesses">
+        <td>{{stillness.stID}}</td>
+        <td>{{stillness.stName}}</td>
+        <td>{{stillness.stChanneldate}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="LTcontainer">
+    <table class="LTtable" *ngIf="!isEmptyObject(ltillnesses)">
+      <thead>
+      <tr>
+        <th>Long Term Illness ID</th>
+        <th>Long Term Illness Name</th>
+        <th>Channel Date</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let ltillness of ltillnesses">
+        <td>{{ltillness.ltID}}</td>
+        <td>{{ltillness.ltName}}</td>
+        <td>{{ltillness.ltChanneldate}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

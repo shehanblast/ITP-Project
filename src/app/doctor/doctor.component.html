@@ -1,5 +1,5 @@
 
-<app-header></app-header>
+<!--<app-header></app-header>
 
 <div class="row">
   <div class="col-md-2">
@@ -9,5 +9,55 @@
     <br>
     <p>doctor works!</p>
   </div>
-</div>
+</div>-->
 
+<div class="container">
+  <H1>Add New Doctor</H1></div>
+
+<div class="container">
+  <!--<div class="alert alert-warning" *ngIf="todoForm.dirty && todoForm.invalid">Enter valid values</div>
+  <div class="alert alert-warning" *ngIf="todoForm.dirty && targetDate.invalid">Enter valid Target Date</div>
+  <div class="alert alert-warning" *ngIf="todoForm.dirty && description.invalid">Enter atleast 5 characters in Description</div>-->
+
+  <form (ngSubmit)="!doctorForm.invalid && saveDoctor()" #doctorForm="ngForm">
+    <fieldset class="form-group">
+      <label>Doctor Name</label>
+      <input type="text" #name="ngModel"
+             [(ngModel)]="doctor.name" class="form-control"
+             name="name" required="required" minlength="10">
+    </fieldset>
+
+    <fieldset class="form-group">
+      <label>Specialization</label>
+      <input type="text" #specialization="ngModel"
+             [(ngModel)]="doctor.specialization" class="form-control"
+             name="specialization" required="required" minlength="5">
+    </fieldset>
+
+
+    <fieldset class="form-group">
+      <label>Email</label>
+      <input type="text" #email="ngModel"
+             [(ngModel)]="doctor.email" class="form-control"
+             name="email" required="required" minlength="10">
+    </fieldset>
+
+    <fieldset class="form-group">
+      <label>Arrival Time</label>
+      <input type="text" #a_time="ngModel"
+             [(ngModel)]="doctor.a_time" class="form-control"
+             name="a_time" required="required" minlength="10">
+    </fieldset>
+
+    <fieldset class="form-group">
+      <label>Patient Number</label>
+      <input type="text" #patientsNumber="ngModel"
+             [(ngModel)]="doctor.patientsNumber" class="form-control"
+             name="patientsNumber" required="required" minlength="2">
+    </fieldset>
+
+    
+
+    <button type="submit" class="btn btn-success">Save</button>
+  </form>
+</div>

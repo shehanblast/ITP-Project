@@ -1,0 +1,92 @@
+.body{
+    font-family: "Lato", sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 1080px;
+    background-image: linear-gradient(to right, floralwhite, steelblue);
+  
+  }
+  
+  input.ng-touched.ng-invalid{
+      border-color: #dc3545;
+      border-width: 3px;
+    }
+    
+    input.ng-touched.ng-invalid:focus { 
+      outline: none;
+      border-color: #dc3545;
+      box-shadow: 0 0 10px #dc3545;
+    }
+    
+    input.ng-valid{
+      border-color: #28a745;
+      border-width: 3px;
+    }
+    
+    input.ng-valid:focus { 
+      outline: none;
+      border-color: #28a745;
+      box-shadow: 0 0 10px #28a745;
+    }
+  
+    input{
+      margin-top: 20px;
+      width: 400px;
+      height: 20px;
+      background-color: #E0FFFF;
+      display: table-cell;
+    }
+  
+    .InsertLongTermIlnesses{
+      width: 700px;
+      height: 220px;
+      background-color : rgba(40, 41, 41, 0.6) ;
+      border-radius: 50px;
+      text-align: center;
+      display: block;
+      margin-top: 50px;
+      border: solid black;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    label{
+      display: table-cell;
+      text-align: right;
+      padding-right: 6px;
+      font-weight: bold;
+    }
+  
+    .form-group{
+      border: hidden;
+      text-align: left;
+      display:table-row;
+      margin-top: 20px;
+      
+    }
+    
+    form{
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    button[type=submit]
+  {
+    margin-top: 20px;
+    background-color: #87CEFA;
+    width: 100px;
+    height: 45px;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+  }
+  
+  small{
+    color:#dc3545;
+    background-color: #ecd7d7;
+    padding: 2px;
+   
+  }

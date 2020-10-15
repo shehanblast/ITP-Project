@@ -1,0 +1,40 @@
+.body{
+    font-family: "Lato", sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100%;
+    background-image: linear-gradient(to right, floralwhite, steelblue);
+  
+  }
+
+  table{
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  th, td {
+    border: 2px solid white;
+    margin: auto;
+    width: 700px;
+    text-align: center;
+    
+  }
+
+  th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(71, 147, 247);
+    color: black;
+    text-align: center;
+  }
+
+  .btn-info{
+    background-color: mediumturquoise;
+  }
+
+  h1{
+    text-align: center;
+    color: red;
+  }

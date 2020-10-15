@@ -9,7 +9,7 @@ import {HardcodedAuthenticationService} from '../service/hardcoded-authenticatio
 export class MenuComponent implements OnInit {
 
 
-  constructor(private hardcodedAuthenticationService:HardcodedAuthenticationService) { }
+  constructor(public hardcodedAuthenticationService:HardcodedAuthenticationService) { }
 
   ngOnInit() {
 

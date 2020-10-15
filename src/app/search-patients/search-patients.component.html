@@ -1,0 +1,28 @@
+<div class = "body">
+    <script src="src/assets/js/search-patient.js"></script>
+    <link rel = "stylesheet" type = "text/css" href = "search-patients.component.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title></title>
+    
+    <app-patient-header></app-patient-header>
+    <div class = "searchBar">
+      <form>
+        <table>
+          <tr>
+            <td>
+              <input type="text" class="form-control" name="patientName" [(ngModel)]="patientName" required="required" placeholder="Enter name">
+            </td> 
+            <td>
+              <button (click) = findPatient(patientName) class="fa fa-search"></button>
+            </td>
+          </tr>
+      </table>
+      </form>
+    </div>
+    
+    
+    <div class = "clock">
+      <h4>{{ currentDate | date:'dd/MM/yyyy HH:mm:ss a'}}</h4>
+    </div>
+    
+    </div>
