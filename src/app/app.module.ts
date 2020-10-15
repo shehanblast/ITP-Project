@@ -36,6 +36,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +61,10 @@ import { LayoutModule } from '@angular/cdk/layout';
     ListDrugsComponent,
     SupplierComponent,
     Dashboard2Component,
-    HomeComponent
+    HomeComponent,
+
+    HeaderComponent,
+
   ],
   imports: [
     BrowserModule,

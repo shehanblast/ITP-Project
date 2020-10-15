@@ -40,6 +40,7 @@ const routes: Routes = [
   { path: 'dash2', component: Dashboard2Component, canActivate:[RouteGuardService] },
 
 
+
   { path: '**', component: ErrorComponent }//anything else
 ];
 
